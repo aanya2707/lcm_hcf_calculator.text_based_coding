@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: aquamarine;
+    margin-top: 25;
+}
+
+h2 {
+    font-size: 25xp;
+    color:chartreuse;
+}
+
+p{
+font-size: 23px;
+    color:fuchsia; 
+}
+
+#cal{
+background-color: deepskyblue;
+}
+
+#HCF{
+background-color:blanchedalmond;
+}
+
+#LCM{
+background-color: beige;
+}
+
+#Con{
+background-color:deeppink;
+}
+
+.menu { 
+     background-color:azure;
+    font-family: inherit;
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    margin-top: 0px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.links {
+    display: inline;
+    color:bisque;
+    padding-left: 33px;
+    padding-right: 25px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.links:hover {
+    font-size: 29px;
+    text-decoration: underline;
+    background-color: floralwhite;
+}
+
+html{
+    scroll-behavior: smooth;
+}

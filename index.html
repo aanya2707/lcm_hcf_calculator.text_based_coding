@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>HCF Calculator</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <ul class="menu">
+        <li class="links"><a href="#Welcome">Home</a></li>
+        <li class="links"><a href="#cal">Calculator</a></li>
+        <li class="links"><a href="#HCF">Example of HCF</a></li>
+        <li class="links"><a href="#LCM">Example of LCM</a></li>
+        <li class="links"><a href="#Con">Contact</a></li>
+    </ul>
+    </center>
+    <section id="Welcome">
+    <h1>LCM and HCF Calculator</h1>
+    <h2>HCF</h2>
+    <p>Here is the interesting HCF calculator to find the highest common factor for the given list of numbers. Such factor is also referred to as the greatest common factor (GCF) or highest common divisor is the highest number which divides all the numbers in the list exactly.
+    </p>
+    <h2>LCM</h2>
+    <p>And LCM refers to least common factor of the multiples of the given numbers. The least common multiple of the denominators of a fraction can be termed as. Use the online calculator and find the LCM by entering the two or more numbers.
+    </p>
+        </section>
+    <section id="cal">
+        <form name="calcform" autocomplete="off">
+            <table class="calc2">
+                <tr>
+                    <td>First number:</td>
+                    <td><input type="number" step="any" name="a" class="intext" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Second number:</td>
+                    <td><input type="number" step="any" name="b" class="intext"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="button" value="Calculate" class="btn" onclick="gcfcalc()"> <input type="reset" value="&#10007;" class="btn"></td>
+                </tr>
+                <tr>
+                    <td>Highest Common Factor (gcf):</td>
+                    <td><input type="text" name="gcf" class="outtext" readonly></td>
+                </tr>
+                <tr>
+                    <td>Least common multiple (lcm):</td>
+                    <td><input type="text" name="lcm" class="outtext" readonly></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            var gcd = function(a, b) {
+                if (!b) {
+                    return a;
+                }
+                return gcd(b, a % b);
+            };
+
+            function gcfcalc() {
+                var a = document.calcform.a.value;
+                var b = document.calcform.b.value;
+                if (a != Math.floor(a) || b != Math.floor(b)) {
+                    alert("Please enter integer numbers");
+                    return;
+                }
+                if (a == '' || b == '') {
+                    alert("Please enter integer numbers");
+                    return;
+                }
+                if (a == 0 && b == 0) {
+                    alert("Please enter at least one non zero integer");
+                    return;
+                }
+                var g = gcd(a, b);
+                if (g < 0) g = -g;
+                a = parseInt(a);
+                b = parseInt(b);
+                g = parseInt(g);
+                var lcm = (a * b) / g;
+                document.calcform.gcf.value = g;
+                document.calcform.lcm.value = lcm;
+            }
+
+        </script>
+    </section>
+
+    <body>
+        <section id="HCF">
+            <h2>HCF</h2>
+            <p>Use the free online HCF calculator to find the highest number which divides all the numbers in the given list. You can enter two or more numbers and click calculate, the highest common factor calculator will update you the result. HCF is the largest positive number that divides the given numbers, without any reminder. For example: highest common factor of 60 and 75 = 15 because 15 is the highest number which divides both 60 and 75 exactly. Similarly, HCF of 24 and 36 is 12, because the common factors of 24 and 36 = 1, 2, 3, 4, 6, 8 and 12. Hence, the Highest Common Factor (H.C.F) of 24 and 36 is 12 and for 24, 36 and 56 it is 4.
+                <br><br>
+                Example<br>
+                Find HCF of 12, 20 and 18
+                <br><br>
+                Factors of 12 = 2×2×3<br>
+                Factors of 18 = 2×3×3<br>
+                Factors of 20 = 2×2×5<br>
+                The common factors of 12, 18 and 20 are : 2<br>
+                Hence, 2 is the Highest Common Factor of 18, 20 and 12.
+            </p>
+        </section>
+        <section id="LCM">
+            <h2>LCM</h2>
+            <p>Calculate the Least Common Multiple by Just entering the numbers and get the result using our online LCM Calculator.<br><br>
+
+                Example<br>
+                Find the LCM of 12 and 20
+                <br><br>
+                Factors of 12 = 2×2×3<br>
+                Factors of 20 = 2×2×5<br>
+                Multiply the common factors of 12 and 20 are : 2 × 2 = 4 <br>
+                Multiply it with the remaining factors = 4 × 3 × 5 = 60<br>á
+                Therefore, the LCM of 12 and 20 is 60
+            </p>
+        </section>
+        <section id="Con">
+            <h2>LCM and HCF Calculator <br> Made by <br> Aanya Singla</h2>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                <i class="fa fa-envelope">&nbsp;&nbsp;<h3>aanyasingla2707@gmail.com</h3></i>
+            </a>
+        </section>
+    </body>
+</body>
+
+</html>
